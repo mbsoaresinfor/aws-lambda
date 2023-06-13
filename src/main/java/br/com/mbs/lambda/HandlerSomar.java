@@ -7,13 +7,11 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 
 public class HandlerSomar 
 		implements
-			RequestHandler<List<Float>,Float>{
+			RequestHandler<String,String>{
 
-	public Float handleRequest(List<Float> input, Context context) {
+	public String handleRequest(String input, Context context) {
 
-		return input
-				.stream()
-				.reduce(0f,(subtotal, element) -> subtotal + element);
+		return "Enviado parametro "+ input;
 	}
 
 }
