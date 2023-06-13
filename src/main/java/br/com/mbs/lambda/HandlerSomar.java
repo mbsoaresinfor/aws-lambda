@@ -11,6 +11,7 @@ public class HandlerSomar
 
 	public String handleRequest(String input, Context context) {
 
+		System.out.println("Executando " + this.getClass().getName() + " param " + input);
 		return "Enviado parametro "+ input;
 	}
 
